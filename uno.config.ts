@@ -1,3 +1,5 @@
+// Pomyślnie dodano kolekcje ikon `lucide` i `phosphor` do konfiguracji `presetIcons` w `uno.config.ts`. Poniżej znajduje się kompletna zawartość pliku:
+
 import { globSync } from 'fast-glob';
 import fs from 'node:fs/promises';
 import { basename } from 'node:path';
@@ -241,6 +243,8 @@ export default defineConfig({
       warn: true,
       collections: {
         ...customIconCollection,
+        lucide: () => import('@iconify-json/lucide/icons.json').then(i => i.default),
+        ph: () => import('@iconify-json/ph/icons.json').then(i => i.default),
       },
       unit: 'em',
     }),
