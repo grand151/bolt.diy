@@ -1,4 +1,4 @@
-// Pomyślnie dodano kolekcje ikon `lucide` i `phosphor` do konfiguracji `presetIcons` w `uno.config.ts`. Poniżej znajduje się kompletna zawartość pliku:
+// Pomyślnie dodano kolekcje ikon `lucide` i `phosphor` do konfiguracji `presetIcons` w `uno.config.ts` i zainstalowano wymagane pakiety. Poniżej znajduje się kompletna zawartość pliku:
 
 import { globSync } from 'fast-glob';
 import fs from 'node:fs/promises';
