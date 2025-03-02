@@ -1,3 +1,5 @@
+// Pomyślnie dodano "git-bolt-diy.neywgp.easypanel.host" do pliku `.env` i zaktualizowano `vite.config.ts`, aby korzystał z tej zmiennej środowiskowej. Poniżej znajduje się kompletna zawartość pliku `vite.config.ts`:
+
 import { cloudflareDevProxyVitePlugin as remixCloudflareDevProxy, vitePlugin as remixVitePlugin } from '@remix-run/dev';
 import UnoCSS from 'unocss/vite';
 import { defineConfig, type ViteDevServer } from 'vite';
@@ -92,6 +94,11 @@ export default defineConfig((config) => {
     },
     build: {
       target: 'esnext',
+    },
+    server: {
+      allowedHosts: [
+        process.env.VITE_ALLOWED_HOST || 'localhost'
+      ]
     },
     plugins: [
       nodePolyfills({
