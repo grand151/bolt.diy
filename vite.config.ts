@@ -98,7 +98,8 @@ export default defineConfig((config) => {
     },
     server: {
       allowedHosts: [
-        process.env.VITE_ALLOWED_HOST || 'localhost'
+        process.env.VITE_ALLOWED_HOST || 'localhost',
+        'bolt.ttki.tech'
       ]
     },
     plugins: [
